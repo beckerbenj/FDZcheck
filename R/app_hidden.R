@@ -96,12 +96,12 @@ runFDZcheck <- function(...) {
       eatGADS::import_spss(input$upload$datapath)
     })
     observeEvent(input$upload, {
-      show("encoding_checks")
-      show("varLabel_checks")
-      show("valLabel_checks")
-      show("missing_checks")
-      show("id_checks")
-      show("sdc_checks")
+      shinyjs::show("encoding_checks")
+      shinyjs::show("varLabel_checks")
+      shinyjs::show("valLabel_checks")
+      shinyjs::show("missing_checks")
+      shinyjs::show("id_checks")
+      shinyjs::show("sdc_checks")
     })
     
     clean_encoding_data <- reactive({

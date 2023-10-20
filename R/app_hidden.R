@@ -99,7 +99,7 @@ runFDZcheck <- function(...) {
       shinyjs::show("encoding_checks")
       shinyjs::show("varLabel_checks")
       shinyjs::show("valLabel_checks")
-      shinyjs::show("missing_checks")
+      shinyjs::show("missings_checks")
       shinyjs::show("id_checks")
       shinyjs::show("sdc_checks")
     })
@@ -180,7 +180,7 @@ runFDZcheck <- function(...) {
       sdc_vars <- strsplit(input$sdc_variables, ", ")[[1]]
       exclude_vars <- setdiff(eatGADS::namesGADS(data()), sdc_vars)
       out <- eatFDZ::sdc_check(input$upload$datapath, exclude = exclude_vars)
-      out[out$exclude == FALSE, ]
+      out[out$exclude == FALSE, c("variable", "nKatOhneMissings", "nValid", "nKl5")]
     })
     
     

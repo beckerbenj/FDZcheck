@@ -2,8 +2,8 @@ Package: FDZcheck
 Title: Perform data checks as recommended by the FDZ at IQB.
 Version: 0.0.0.9000
 Authors@R: c(
-    person("Benjamin", "Becker", email = "b.becker@iqb.hu-berlin.de", role = c("aut", "cre")),
-           comment = c(ORCID = "0000-0003-3074-0918"))
+    person("Benjamin", "Becker", email = "b.becker@iqb.hu-berlin.de", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0003-3074-0918")))
 Description: Perform data checks as recommended by the FDZ at IQB. This includes checks such as completeness of variable labels, value labels, approriate missing tags
 Imports: 
     shiny,
